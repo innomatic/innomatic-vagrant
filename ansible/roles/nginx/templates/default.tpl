@@ -1,11 +1,11 @@
 server {
     listen 80;
 
-    server_name symfony;
+    server_name innomatic;
     root        {{ doc_root }};
 
-    error_log   /var/log/nginx/symfony/error.log;
-    access_log  /var/log/nginx/symfony/access.log;
+    error_log   /var/log/nginx/innomatic/error.log;
+    access_log  /var/log/nginx/innomatic/access.log;
 
     rewrite     ^/(app|app_dev)\.php/?(.*)$ /$1 permanent;
 
