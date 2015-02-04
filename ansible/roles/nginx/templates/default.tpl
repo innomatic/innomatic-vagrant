@@ -18,7 +18,7 @@ server {
         rewrite     ^(.*)$ /index.php/$1 last;
     }
 
-    location ~ ^/(app|app_dev|config)\.php(/|$) {
+    location ~ ^/(app|app_dev|index|config)\.php(/|$) {
         fastcgi_pass            unix:/var/run/php5-fpm.sock;
         fastcgi_buffer_size     16k;
         fastcgi_buffers         4 16k;
