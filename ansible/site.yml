@@ -26,7 +26,6 @@
     - php5-cli
     - php5-common
     - composer
-    - phpunit
     - mysql
     - mongo
     - git
