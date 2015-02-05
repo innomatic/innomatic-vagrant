@@ -1,7 +1,13 @@
 # Vagrant environment for Innomatic Platform
 
-This project provides a virtual environment for Innomatic Platform applications development using
+This project provides a virtual environment for Innomatic Platform 7.x.x applications development using
 [Vagrant](https://vagrantup.com).
+
+At this stage this Vagrant environment has been configured to run the Innomatic Legacy stack through the new [Innomatic Platform](https://github.com/innomatic/innomatic-platform). This means that the web server is configured to point the document root to the the innomatic_legacy folder inside the new platform.
+
+Once the new Innomatic Platform is ready, this Vagrant configuration will no more start the legacy stack by default.
+
+You should not use this Vagrant environment for classic Innomatic Legacy stack installations (pre-7.x.x versions) not contained inside the new Innomatic Platform - you should use its own [Vagrantfile](https://github.com/innomatic/innomatic-legacy/blob/develop/Vagrantfile) instead.
 
 ## What's in the box?
 
@@ -58,7 +64,7 @@ $ vagrant up
 Starting the VM might take some time, since it will download the entire box
 and additional applications/library. When the VM is done setting up, point
 your browser towards [http://192.168.33.10](http://192.168.33.10) and there you
-have it: Innomatic Platform.
+have it: Innomatic Platform (Legacy stack).
 
 #### Note
 
