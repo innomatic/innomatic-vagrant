@@ -3,6 +3,11 @@ Vagrant.configure("2") do |config|
     config.vm.box       = 'precise64'
     config.vm.box_url   = 'http://files.vagrantup.com/precise64.box'
 
+    config.vm.provider "vmware_fusion" do |v, override|
+        override.vm.box     = 'hashicorp/precise64'
+        override.vm.box_url = 'https://vagrantcloud.com/hashicorp/precise64/version/2/provider/virtualbox.box'
+    end
+
     # Configure the network interfaces
     config.vm.network :private_network, ip:    "192.168.33.10"
     config.vm.network :forwarded_port,  guest: 80,    host: 8080
@@ -17,7 +22,13 @@ Vagrant.configure("2") do |config|
     # Configure VirtualBox environment
     config.vm.provider :virtualbox do |v|
         v.name = (0...8).map { (65 + rand(26)).chr }.join
-        v.customize [ "modifyvm", :id, "--memory", 512 ]
+        v.customize [ "modifyvm", :id, "--memory", 2048 ]
+    end
+
+    # Configure VMWare Fusion environment
+    config.vm.provider :vmware_fusion do |v|
+        v.name = (0...8).map { (65 + rand(26)).chr }.join
+        v.vmx["memsize"] = "2048"
     end
 
     # Provision the box
