@@ -1,13 +1,21 @@
 # Vagrant environment for Innomatic Platform
 
-This project provides a virtual environment for Innomatic Platform 7.x.x applications development using
-[Vagrant](https://vagrantup.com).
+This project provides a virtual environment for Innomatic Platform 7.x.x
+applications development using [Vagrant](https://vagrantup.com).
 
-At this stage this Vagrant environment has been configured to run the Innomatic Legacy stack through the new [Innomatic Platform](https://github.com/innomatic/innomatic-platform). This means that the web server is configured to point the document root to the the innomatic_legacy folder inside the new platform.
+At this stage this Vagrant environment has been configured to run the Innomatic
+Legacy stack through the new
+[Innomatic Platform](https://github.com/innomatic/innomatic-platform). This means
+that the web server is configured to point the document root to the Innomatic
+legacy folder inside the new platform.
 
-Once the new Innomatic Platform is ready, this Vagrant configuration will no more start the legacy stack by default.
+When the new Innomatic Platform will be ready in the future, this Vagrant
+configuration will no more start the legacy stack by default.
 
-You should not use this Vagrant environment for classic Innomatic Legacy stack installations (pre-7.x.x versions) not contained inside the new Innomatic Platform - you should use its own [Vagrantfile](https://github.com/innomatic/innomatic-legacy/blob/develop/Vagrantfile) instead.
+You should not use this Vagrant environment for pre-7.x.x Innomatic Legacy
+stack installations - you should use their own
+[Vagrantfile](https://github.com/innomatic/innomatic-legacy/blob/develop/Vagrantfile)
+instead.
 
 ## What's in the box?
 
@@ -79,13 +87,23 @@ $ composer install
 ```
 
 Then point your browser towards [http://192.168.33.10](http://192.168.33.10)
-and there you have it: Innomatic Platform (Legacy stack) tenants desktop access.
+and follow the Innomatic web setup procedure using the following MySQL user:
+
+* Username: `root`
+* Password: empty
+
+At the end of the web setup you are redirected to the tenant desktop login
+page.
 
 Before accessing a tenant desktop, you need to create at least a tenant using
 the Innomatic root control center desktop or through the tenants CLI script.
 
 To access the Innomatic root control center you should point your browser
-towards [http://192.168.33.10/root/](http://192.168.33.10/root/).
+towards [http://192.168.33.10/root/](http://192.168.33.10/root/) with the
+following credentials:
+
+* Username: `root`
+* Password: the one you provided during the web setup phase
 
 #### Note
 
