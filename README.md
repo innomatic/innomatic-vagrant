@@ -40,6 +40,11 @@ must have that installed. Follow the
 
 ### Usage
 
+This Vagrant configurations is already provided in Innomatic Platform inside vagrant folder.
+
+You can also manually install this configuration in a new project. This is also
+needed if you are installing Innomatic using composer create-project.
+
 Installation is as easy as cloning a GitHub project:
 
 ```
