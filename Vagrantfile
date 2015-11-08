@@ -1,11 +1,9 @@
 Vagrant.configure("2") do |config|
     # Configure the box to use
     config.vm.box       = 'precise64'
-    config.vm.box_url   = 'http://files.vagrantup.com/precise64.box'
 
     config.vm.provider "vmware_fusion" do |v, override|
         override.vm.box     = 'hashicorp/precise64'
-        override.vm.box_url = 'https://vagrantcloud.com/hashicorp/precise64/version/2/provider/virtualbox.box'
     end
 
     # Configure the network interfaces
