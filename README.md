@@ -42,7 +42,7 @@ must have that installed. Follow the
 
 This Vagrant configurations is already provided in Innomatic Platform inside vagrant folder.
 
-You can also manually install this configuration in a new project. This is also
+You can also manually copy this configuration in a new project. This is also
 needed if you are installing Innomatic using composer create-project.
 
 Installation is as easy as cloning a GitHub project:
@@ -67,11 +67,25 @@ $ vagrant up
 ```
 
 Starting the VM might take some time, since it will download the entire box
-and additional applications/library. When the VM is done setting up, point
-your browser towards [http://192.168.33.10](http://192.168.33.10) and there you
-have it: Innomatic Platform (Legacy stack) tenants desktop access.
+and additional applications/library.
 
-To access the Innomatic root control center you should point your browser towards [http://192.168.33.10/root/](http://192.168.33.10/root/).
+When the VM is done setting up, enter the vagrant box and launch composer
+install like this:
+
+```
+$ vagrant ssh
+$ cd /var/www
+$ composer install
+```
+
+Then point your browser towards [http://192.168.33.10](http://192.168.33.10)
+and there you have it: Innomatic Platform (Legacy stack) tenants desktop access.
+
+Before accessing a tenant desktop, you need to create at least a tenant using
+the Innomatic root control center desktop or through the tenants CLI script.
+
+To access the Innomatic root control center you should point your browser
+towards [http://192.168.33.10/root/](http://192.168.33.10/root/).
 
 #### Note
 
