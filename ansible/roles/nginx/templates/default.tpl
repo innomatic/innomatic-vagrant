@@ -2,7 +2,7 @@ server {
     listen 80;
 
     server_name innomatic;
-    root        {{ legacy_doc_root }};
+    root        {{ doc_root }};
 
     error_log   /var/log/nginx/innomatic/error.log;
     access_log  /var/log/nginx/innomatic/access.log;
@@ -10,12 +10,12 @@ server {
     rewrite     ^/(index|app|app_dev)\.php/?(.*)$ /$1 permanent;
 
     location / {
-        index       index.php;
+        index       app_dev.php;
         try_files   $uri @rewriteapp;
     }
 
     location @rewriteapp {
-        rewrite     ^(.*)$ /index.php/$1 last;
+        rewrite     ^(.*)$ /app_dev.php/$1 last;
     }
 
     location ~ ^/(app|app_dev|index|config)\.php(/|$) {
