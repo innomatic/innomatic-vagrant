@@ -105,6 +105,9 @@ following credentials:
 * Username: `root`
 * Password: the one you provided during the web setup phase
 
+Full Innomatic Platform installation instructions can be found
+[here](https://innomatic.atlassian.net/wiki/display/IMP/Installation+and+Upgrade+Guides).
+
 #### Note
 
 If you're using Windows, you have to modify the `Vagrantfile` a little bit to
