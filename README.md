@@ -48,11 +48,6 @@ must have that installed. Follow the
 
 ### Usage
 
-This Vagrant configurations is already provided in Innomatic Platform inside vagrant folder.
-
-You can also manually copy this configuration in a new project. This is also
-needed if you are installing Innomatic using composer create-project.
-
 Installation is as easy as cloning a GitHub project:
 
 ```
@@ -67,7 +62,7 @@ $ cd your-innomatic-project
 $ git submodule add https://github.com/innomatic/innomatic-vagrant.git vagrant
 ```
 
-After the project is added, you can start the environment like this:
+After the project has been added, you can start the environment like this:
 
 ```
 $ cd vagrant
@@ -76,6 +71,8 @@ $ vagrant up
 
 Starting the VM might take some time, since it will download the entire box
 and additional applications/library.
+
+### Innomatic setup
 
 When the VM is done setting up, enter the vagrant box and launch composer
 install like this:
