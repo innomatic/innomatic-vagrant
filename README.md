@@ -3,15 +3,6 @@
 This project provides a virtual environment for Innomatic Platform 7.x.x
 applications development using [Vagrant](https://vagrantup.com).
 
-At this stage this Vagrant environment has been configured to run the Innomatic
-Legacy stack through the new
-[Innomatic Platform](https://github.com/innomatic/innomatic-platform). This means
-that the web server is configured to point the document root to the Innomatic
-legacy folder inside the new platform.
-
-When the new Innomatic Platform will be ready in the future, this Vagrant
-configuration will no more start the legacy stack by default.
-
 You should not use this Vagrant environment for pre-7.x.x Innomatic Legacy
 stack installations - you should use their own
 [Vagrantfile](https://github.com/innomatic/innomatic-legacy/blob/develop/Vagrantfile)
