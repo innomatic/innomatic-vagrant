@@ -5,7 +5,7 @@ applications development using [Vagrant](https://vagrantup.com).
 
 You should not use this Vagrant environment for pre-7.x.x Innomatic Legacy
 stack installations - you should use their own
-[Vagrantfile](https://github.com/innomatic/innomatic-legacy/blob/develop/Vagrantfile)
+[Vagrantfile](https://github.com/innomatic/innomatic-legacy/blob/master/Vagrantfile)
 instead.
 
 ## What's in the box?
