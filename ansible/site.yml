@@ -16,6 +16,7 @@
       - { name: redis, package: php5.6-redis }
       - { name: apc, package: php-apc }
       - { name: zip, package: php5.6-zip }
+      - { name: dom, package: php5.6-dom }
     php_ppa: php
   roles:
     - init
