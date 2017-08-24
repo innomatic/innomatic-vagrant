@@ -1,9 +1,9 @@
 Vagrant.configure("2") do |config|
     # Configure the box to use
-    config.vm.box       = 'precise64'
+    config.vm.box       = 'ubuntu/trusty64'
 
     config.vm.provider "vmware_fusion" do |v, override|
-        override.vm.box     = 'hashicorp/precise64'
+        override.vm.box     = 'phusion/ubuntu-14.04-amd64'
     end
 
     # Configure the network interfaces
