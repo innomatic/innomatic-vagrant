@@ -11,6 +11,8 @@
       - wget
       - build-essential
       - python-software-properties
+      - zip
+      - unzip
 
   - name: Add ppa repository
     sudo: yes

@@ -15,6 +15,7 @@
       - { name: mysql, package: php5.6-mysql }
       - { name: redis, package: php5.6-redis }
       - { name: apc, package: php-apc }
+      - { name: zip, package: php5.6-zip }
     php_ppa: php
   roles:
     - init
