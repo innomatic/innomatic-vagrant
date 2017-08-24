@@ -14,7 +14,7 @@
 
   - name: Add ppa repository
     sudo: yes
-    apt_repository: repo=ppa:ondrej/{{ php_ppa }}
+    apt_repository: repo='ppa:ondrej/php/ubuntu trusty main'
 
   - name: Update apt again
     sudo: yes
@@ -23,4 +23,4 @@
   - name: Install extra packages
     sudo: yes
     apt:  pkg={{ item }} state=latest
-    with_items: sys_packages
+    with_items: "{{ sys_packages }}"

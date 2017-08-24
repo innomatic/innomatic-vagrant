@@ -7,19 +7,15 @@
     sys_packages:
       - mcrypt
     php_packages:
-      - { name: dev, package: php5-dev }
+      - { name: dev, package: php5.6-dev }
       - { name: pear, package: php-pear }
-      - { name: xdebug, package: php5-xdebug }
-      - { name: curl, package: php5-curl }
-      - { name: mcrypt, package: php5-mcrypt }
-      - { name: mysql, package: php5-mysql }
-      - { name: redis, package: php5-redis }
+      - { name: xdebug, package: php5.6-xdebug }
+      - { name: curl, package: php5.6-curl }
+      - { name: mcrypt, package: php5.6-mcrypt }
+      - { name: mysql, package: php5.6-mysql }
+      - { name: redis, package: php5.6-redis }
       - { name: apc, package: php-apc }
-    php_extensions:
-      - { name: "jsmin", package: "pecl.php.net/jsmin-beta" }
-      - { name: "mongo", package: "pecl.php.net/mongo" }
-      - { name: "xhprof", package: "pecl.php.net/xhprof-beta" }
-    php_ppa: php5
+    php_ppa: php
   roles:
     - init
     - nginx
@@ -28,10 +24,7 @@
     - php5-common
     - composer
     - mysql
-    - mongo
     - git
     - curl
     - sqlite
     - wget
-    - rabbitmq
-    - redis
